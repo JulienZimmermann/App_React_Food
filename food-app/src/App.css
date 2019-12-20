@@ -1,0 +1,14 @@
+.recipes_container{
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: 370px 370px;
+  grid-column-gap: 20px;
+  grid-row-gap: 25px;
+  justify-content: center;
+}
+
+.recipe_element{
+  border: 2px solid green;
+}
+
+
