@@ -1,0 +1,137 @@
+.recipe_container{
+    border: 2px solid red;
+    background: #ffded5;
+}
+
+.container-info-recipe, .liste_ingredients_recipe_element{
+    border: 2px solid blue;
+    max-width: 95%;
+    width: 80%;
+    margin: auto;
+}
+
+.title_recipe_element{
+    border: 2px solid brown;
+    text-align: center;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+@media all and (max-width: 700px){
+    .title_recipe_element{
+        font-size: 19px;
+    }
+}
+
+.container_image_recipe_element{
+    border: 4px solid green;
+    text-align: center;
+}
+
+.image_recipe_element{
+    margin: auto;
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.informations_recipe_element{
+    border: 2px solid violet;
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    text-align: center;
+}
+
+@media all and (max-width: 650px){
+    .informations_recipe_element{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.informations_recipe_container{
+    border: 2px dotted darkslategray;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+
+.info_span_recipe_element{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+@media all and (max-width: 700px){
+    .info_span_recipe_element{
+        font-size: 20px;
+    }
+}
+
+.detail_recipe_element{
+    color: #ff6f61;
+    font-size: 24px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.link-recipe{
+    text-decoration: none;
+}
+
+.detail_recipe_element:visited{
+    color: #ff6f61;
+}
+
+.liste_ingredients_recipe_element{
+    border: 3px solid black;
+}
+
+.title_ingredient_recipe{
+    border: 2px solid green;
+    text-align: center;
+    font-size: 21px;
+}
+
+.liste_ingredients_recipe{
+    border: 2px solid slateblue;
+    padding: 2rem;
+    text-align: center;
+}
+
+.item_ingredient_recipe{
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fd594a;
+    padding: 0 0 1em;
+    margin-left: -20px;
+}
+
+.button_recipe{
+    border: 2px solid #fd594a;
+    background: #ff6f61;
+    color: #000;
+    font-size: 18px;
+    padding: 0.5em 1em;
+    margin: 0 0 1rem;
+}
+
+.link_recipe{
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.link_recipe:visited{
+    color: #000;
+}
+
+.return_home_container{
+    border: 2px solid rebeccapurple;
+    text-align: center;
+}
+
+.return_home_button{
+    margin: 20px 0;
+}

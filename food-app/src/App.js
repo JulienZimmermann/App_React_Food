@@ -1,8 +1,7 @@
 import React from 'react';
 import Recepies from './components/Recipes';
-
-import './App.css';
 import Form from './components/Form';
+import HomePage from './components/HomePage';
 
 class App extends React.Component {
   
@@ -23,7 +22,7 @@ class App extends React.Component {
   async getRequest(e){
     e.preventDefault();
     const search = e.target.elements.recipeName.value;
-    const response = await fetch(`https://api.edamam.com/search?q=${search}&app_id=${this.state.API_ID}&app_key=${this.state.API_KEY}&from=0&to=3&calories=591-722&health=alcohol-free`);
+    const response = await fetch(`https://api.edamam.com/search?q=${search}&app_id=${this.state.API_ID}&app_key=${this.state.API_KEY}`);
     const data = await response.json();
     console.log(data.hits);
     this.setState({recipes: data.hits});
@@ -49,9 +48,13 @@ class App extends React.Component {
           getRequest={this.getRequest}
           recipes={this.state.recipes}
         />
+        {localStorage.length === 0 ? <HomePage /> :
+        
         <Recepies 
           recipes={this.state.recipes} 
-        /> 
+        /> }
+        
+        
       </React.Fragment>
      );
   }

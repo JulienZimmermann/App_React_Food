@@ -1,0 +1,130 @@
+.all-container-recipes-accueil{
+    border: 2px solid blue;
+    background: #ffded5;
+}
+
+.container-recipes-accueil, .programme-container-accueil{
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.all-container-recipes-elements-accueil{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.recipe-element-accueil{
+    background: #efefef;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 7px 10px 5px 0px rgba(209,209,209,1);
+}
+
+.link-recipe-element-accueil{
+    text-decoration: none;
+    color: #ff6f61;
+    cursor: pointer;
+}
+
+.link-recipe-element-accueil:visited{
+    color: #ff6f61;
+}
+
+.image-recipe-element-accueil{
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+}
+
+.titre-recipe-element-accueil{
+    font-size: 22px;
+    padding: 0.5em;
+}
+
+.programme-container-accueil{
+    max-width: 88%;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 4px solid blue;
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+.all-container-items-programme{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    width: 83%;
+    margin: auto;
+    border: 6px solid green;
+}
+
+.aside-programme-visuel{
+    border: 4px solid purple;
+}
+
+.programme-indication-item{
+    border: 4px solid red;
+    margin: 3.5rem 0 ;
+}
+
+@media all and (max-width : 960px){
+    .all-container-items-programme{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .aside-programme-visuel{
+        display: flex;
+    }
+
+    .indicateur-plus-programme{
+        display: none;
+    }
+}
+
+.indicateur-plus-programme{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.image-programme{
+    margin: 0 auto;
+    width: 68px;
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.programme-visuel{
+    border: 2px solid goldenrod;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.programme-image{
+    border: 2px solid black;
+    margin: auto;
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.programme-bouton{
+    margin: 1rem 0;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 1em 1.7em;
+    border: none;
+    background: #ff6f61;
+    border: 1px solid #f65445
+}
+
+
