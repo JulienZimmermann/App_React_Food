@@ -4,9 +4,8 @@ import repasEquilibre from '../images/image-programme.png'
 import livreProgramme from '../images/image-livre-programme-aside.png'
 import assietteProgramme from '../images/image-assiette-programme-aside.png'
 import progressionProgramme from '../images/image-progression-programme-aside.png'
-
-
 import './HomePage.css'
+import Modal from './Modal';
 
 class HomePage extends React.Component{
     constructor(props){
@@ -16,7 +15,11 @@ class HomePage extends React.Component{
             API_ID: "127f933a",
             API_KEY:  "18f4a89e533eb1bbde74e798eab9525e",
             recipes: [],
+            modalIsOpen: false,
         };
+
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
     }
 
     async componentDidMount(){
@@ -24,6 +27,14 @@ class HomePage extends React.Component{
         const data = await response.json();
         console.log(data.hits)
         this.setState({recipes : data.hits})
+    }
+
+    openModal(){
+        this.setState({modalIsOpen: true});
+    }
+
+    closeModal(){
+        this.setState({modalIsOpen: false});
     }
 
     render() {
@@ -63,7 +74,7 @@ class HomePage extends React.Component{
                         <div className="aside-programme-visuel">
                             <div className="programme-indication-item">
                                 <img className="image-programme" src={livreProgramme} alt=""/>
-                                <p className="test">Des centaines de recettes gourmandes et rapides à préparer</p>
+                                <p>Des centaines de recettes gourmandes et rapides à préparer</p>
                                 <span className="indicateur-plus-programme">+</span>
                             </div>
                             <div className="programme-indication-item">
@@ -82,8 +93,14 @@ class HomePage extends React.Component{
                                 chou-fleur et tomates"/>
                             </div>
                             <div className="container-programme-bouton">
-                                <button className="programme-bouton">Je programme ma semaine</button>
+                                <button className="programme-bouton" onClick={this.openModal}>
+                                    Je programme ma semaine
+                                </button>
                             </div>
+                            <Modal 
+                                open={this.state.modalIsOpen}
+                                buttonClose={this.closeModal}
+                            />
                         </div>
                     </div>
                 </div>           

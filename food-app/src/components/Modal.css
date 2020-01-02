@@ -1,0 +1,50 @@
+.modal{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 16px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.modal_wrapper{
+    background: #FFF;
+    overflow: auto;
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    width: 600px;
+    padding: 20px;
+}
+
+.modal_wrapper > p{
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.button_close_modal{
+    background: red;
+    border: none;
+    font-size: 20px;
+    padding: 0.5em 0.7em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.title_avertissement{
+    font-size: 38px;
+    color: red
+}
+
+.link_image_enveloppe_contact_modal{
+    margin: 10px;
+}
+
+.image_enveloppe_contact_modal{
+    background: #ff6f61;
+    margin: 20px 0 0;
+    border-radius: 5px;
+}
